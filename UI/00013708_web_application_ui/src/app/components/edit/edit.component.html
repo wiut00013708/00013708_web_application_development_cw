@@ -1,0 +1,34 @@
+<div class="p-8 mt-8 flex justify-center">
+    <form class="shadow border w-4/12 p-4">
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Number </mat-label>
+                <input matInput name="title" type="text" [(ngModel)]="editNumber.number">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Type </mat-label>
+                <input matInput name="description" type="text" [(ngModel)]="editNumber.type">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Choose Contact</mat-label>
+                <mat-select [(ngModel)]="conId" [(value)]="selected" name="Category">
+                    @for(c of contactObject; track c)
+                    {
+                    <mat-option [value]="c.id">{{c.firstName}} {{c.lastName}}</mat-option>
+                    }
+                </mat-select>
+
+            </mat-form-field>
+        </div>
+        <div class="flex justify-around">
+            <button mat-raised-button  (click)="toHome()">Cancel</button>
+            <button mat-raised-button color="primary" (click)="edit()">Edit</button>
+        </div>
+    </form>
+</div>
+
+

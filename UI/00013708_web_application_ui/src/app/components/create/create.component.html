@@ -1,0 +1,32 @@
+
+<div class="p-8 mt-8 flex justify-center">
+    <form class="shadow border w-4/12 p-4">
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Number </mat-label>
+                <input matInput type="text" name="number" [(ngModel)]="numberToCreate.number">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Type</mat-label>
+                <input matInput type="text" name="type" [(ngModel)]="numberToCreate.type">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Choose Contact</mat-label>
+                <mat-select [(ngModel)]="selectedContactId" name="Contact">
+                    @for(item of contacts; track item) 
+                    {
+                    <mat-option [value]="item.id">{{item.firstName}} {{item.lastName}} </mat-option>
+                    }
+                </mat-select>
+
+            </mat-form-field>
+        </div>
+        <div class="flex justify-center">
+            <button mat-raised-button (click)="onCreateBtn()" color="primary">Create</button>
+        </div>
+    </form>
+</div>

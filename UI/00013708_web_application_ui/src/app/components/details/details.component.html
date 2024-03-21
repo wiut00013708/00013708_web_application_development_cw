@@ -1,0 +1,35 @@
+<div class="m-8 justify-center">
+    <mat-card class="shadow w=4/12">
+        <mat-card-content>
+            
+            <div class="p-8">
+                <H1 class="text-blue-900 font-bold font-size-70px ">Contact Details</H1>
+                <div class="mt-4">
+                    <span class="text-gray-600">Phone ID:</span>
+                    <h2 class="text-3xl font-bold mb-4">  {{pNumber.id}}</h2>
+                </div>    
+                
+                <div>
+                    <span class="text-gray-500"> First Name</span>
+                    <h2 class="text-3xl font-bold mb-4">  {{pNumber.contact.firstName}}</h2>
+                </div>
+                
+                <div>
+                    <span class="text-gray-500"> Last Name</span>
+                    <h2 class="text-3xl font-bold mb-4">  {{pNumber.contact.lastName}}</h2>
+                </div>
+
+                <div>
+                    <span class="text-gray-500"> Phone Number</span>
+                    <h2 class="text-3xl font-bold mb-4">  {{pNumber.number}}</h2>
+                </div>
+                <div>
+                    <span class="text-gray-500"> Type</span>
+                    <mat-chip class="ml-2">{{pNumber.type}}</mat-chip>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+

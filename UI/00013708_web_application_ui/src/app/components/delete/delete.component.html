@@ -1,0 +1,19 @@
+<div class="flex mt-8 justify-center">
+    <mat-card class="shadow w-4/12">
+        <mat-card-content>
+            <div class="p-8">
+                <p class="text-xl text-gray-700">ARE YOU SURE TO DELETE THE NUMBER ?</p>
+                <h2 class="text-3xl font-bold mb-4">NAME: {{ deleteNumber.contact.firstName }} {{deleteNumber.contact.lastName}}</h2>
+                <h2 class="text-3xl font-bold mb-4">NUMBER: {{ deleteNumber.number }}</h2>
+            </div>
+            <div class="flex justify-around">
+                <div>
+                    <button mat-raised-button color="primary" (click)="onHomeButtonClick()">Cancel (Home)</button>
+                </div>
+                <div>
+                    <button mat-raised-button color="warn" (click)="onDeleteButtonClick(deleteNumber.id)" >Delete</button>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
